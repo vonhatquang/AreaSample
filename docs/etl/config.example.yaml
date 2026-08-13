@@ -1,0 +1,16 @@
+# Example config for the CREATE TABLE generator.
+# Copy and fill. Agent MUST NOT emit DDL while snowflake.database is TBD.
+
+snowflake:
+  database: TBD
+  schema_map:
+    dbo: RAW_DBO
+    default: RAW
+  quote_identifiers: true
+  emit_pk_clause: false
+  create_mode: if_not_exists   # if_not_exists | create | replace_explicit
+
+include_cdc_metadata_columns: false
+fail_on_yellow: false
+stop_on_first_error: false
+drop_nonpersisted_computed: false
